@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="个人主页 - 现代极简风格" />
+  <title>个人主页 | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "media",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "SF Pro Text",
+              "Segoe UI",
+              "Roboto",
+              "Helvetica Neue",
+              "Arial",
+              "Noto Sans",
+              "sans-serif"
+            ]
+          },
+          colors: {
+            surface: {
+              light: "rgba(255,255,255,0.75)",
+              dark: "rgba(15,23,42,0.65)"
+            }
+          },
+          boxShadow: {
+            soft: "0 8px 30px rgba(0,0,0,0.08)"
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<style>
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-reveal {
+    opacity: 0;
+    animation: fade-up 0.85s ease-out forwards;
+  }
+
+  .hero-reveal-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .hero-reveal-delay-2 {
+    animation-delay: 0.22s;
+  }
+
+  .hero-reveal-delay-3 {
+    animation-delay: 0.36s;
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 2px 18px rgba(2, 6, 23, 0.4);
+  }
+
+  .font-cinematic {
+    font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+    letter-spacing: 0.01em;
+  }
+
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-shadow-soft {
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+    }
+  }
+</style>
+<body class="bg-slate-900 bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center bg-fixed text-slate-100 antialiased selection:bg-white/30">
+  <div class="fixed inset-0 -z-10 bg-slate-900/35"></div>
+  <canvas id="particles" class="pointer-events-none fixed inset-0 z-0"></canvas>
+  <header
+    id="site-nav"
+    class="sticky top-0 z-50 border-b border-white/10 bg-white/10 backdrop-blur-lg transition-all duration-300"
+  >
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#hero" class="font-cinematic text-shadow-soft text-sm font-semibold tracking-wide transition-opacity duration-300 hover:opacity-80">
+        YourName
+      </a>
+      <ul class="flex items-center gap-4 text-sm sm:gap-6">
+        <li><a href="#about" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">关于我</a></li>
+        <li><a href="#projects" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">项目</a></li>
+        <li><a href="#social" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">社交</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="relative z-10">
+    <section id="hero" class="mx-auto flex min-h-[78vh] max-w-6xl items-center px-4 py-24 sm:px-6 lg:px-8">
+      <div class="reveal-on-scroll max-w-3xl rounded-3xl border border-white/20 bg-black/20 p-8 backdrop-blur-lg sm:p-10">
+        <p class="hero-reveal hero-reveal-delay-1 text-shadow-soft mb-4 text-sm tracking-[0.2em] text-cyan-100/90 uppercase">Personal Website</p>
+        <h1 class="font-cinematic hero-reveal hero-reveal-delay-2 text-shadow-soft text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
+          你好，我是 <span class="text-cyan-100">Your Name</span>。
+        </h1>
+        <p class="hero-reveal hero-reveal-delay-3 text-shadow-soft mt-6 max-w-2xl text-base leading-relaxed text-slate-100/90 sm:text-lg">
+          我专注于打造现代、简洁且注重体验的数字产品。欢迎浏览我的项目、经历与联系方式。
+        </p>
+        <div class="hero-reveal hero-reveal-delay-3 mt-10 flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            class="rounded-full border border-white/30 bg-white/20 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/30 hover:shadow-[0_0_24px_rgba(125,211,252,0.55)]"
+          >
+            查看项目
+          </a>
+          <a
+            href="#about"
+            class="rounded-full border border-white/30 bg-black/20 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-black/30 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)]"
+          >
+            了解更多
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="reveal-on-scroll max-w-3xl rounded-3xl border border-white/20 bg-black/20 p-8 backdrop-blur-lg sm:p-10">
+        <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">关于我</h2>
+        <p class="text-shadow-soft mt-6 leading-relaxed text-slate-100/90">
+          这里放置你的个人简介、技能方向和价值观。建议保持文字精炼，突出你擅长的领域与正在探索的方向。
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">项目展示</h2>
+        <a href="#" class="text-shadow-soft text-sm text-slate-100/80 transition-colors duration-300 hover:text-cyan-100">
+          查看全部
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal-on-scroll group overflow-hidden rounded-2xl border border-white/20 bg-white/10 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.6)]">
+          <div class="aspect-[16/10] w-full bg-gradient-to-br from-sky-200/45 via-white/20 to-indigo-300/35">
+            <div class="text-shadow-soft flex h-full items-center justify-center text-sm text-slate-100">项目截图占位图</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-shadow-soft text-lg font-medium">Project One</h3>
+            <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/90">
+              项目简介占位内容，强调目标与成果，突出交互体验和视觉表现。
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">HTML5</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">Tailwind</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">JavaScript</span>
+            </div>
+            <a href="#" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="reveal-on-scroll group overflow-hidden rounded-2xl border border-white/20 bg-white/10 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.6)]">
+          <div class="aspect-[16/10] w-full bg-gradient-to-br from-cyan-200/45 via-white/20 to-blue-300/35">
+            <div class="text-shadow-soft flex h-full items-center justify-center text-sm text-slate-100">项目截图占位图</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-shadow-soft text-lg font-medium">Project Two</h3>
+            <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/90">
+              项目简介占位内容，强调关键技术与价值，兼顾性能和响应式适配。
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">Next.js</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">TypeScript</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">Framer Motion</span>
+            </div>
+            <a href="#" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">查看详情 →</a>
+          </div>
+        </article>
+
+        <article class="reveal-on-scroll group overflow-hidden rounded-2xl border border-white/20 bg-white/10 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(251,191,36,0.52)]">
+          <div class="aspect-[16/10] w-full bg-gradient-to-br from-indigo-200/45 via-white/20 to-sky-300/35">
+            <div class="text-shadow-soft flex h-full items-center justify-center text-sm text-slate-100">项目截图占位图</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-shadow-soft text-lg font-medium">Project Three</h3>
+            <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/90">
+              项目简介占位内容，强调设计思路与体验，包含易用性和无障碍优化。
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">Vue</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">Vite</span>
+              <span class="rounded-full border border-white/25 bg-black/20 px-2.5 py-1 text-xs text-slate-100">CSS Motion</span>
+            </div>
+            <a href="#" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">查看详情 →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="social" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">社交链接</h2>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">GitHub</a>
+        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">LinkedIn</a>
+        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(251,191,36,0.5)]">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 mx-auto mb-8 max-w-6xl rounded-2xl border border-white/20 bg-black/20 px-4 py-6 text-center text-sm text-slate-100/85 backdrop-blur-lg">
+    <p class="text-shadow-soft">&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const nav = document.getElementById("site-nav");
+    const year = document.getElementById("year");
+    const revealItems = document.querySelectorAll(".reveal-on-scroll");
+    const particlesCanvas = document.getElementById("particles");
+    const pctx = particlesCanvas.getContext("2d");
+    year.textContent = new Date().getFullYear();
+
+    const onScroll = () => {
+      const scrolled = window.scrollY > 12;
+      nav.classList.toggle("bg-black/25", scrolled);
+      nav.classList.toggle("border-white/25", scrolled);
+      nav.classList.toggle("shadow-lg", scrolled);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    const particles = [];
+    let canvasWidth = 0;
+    let canvasHeight = 0;
+    let rafId = 0;
+    const pointer = {
+      x: -9999,
+      y: -9999,
+      active: false
+    };
+
+    const createParticle = () => {
+      const warmTone = Math.random() > 0.65;
+      return {
+        x: Math.random() * canvasWidth,
+        y: Math.random() * canvasHeight,
+        r: Math.random() * 1.8 + 0.6,
+        vx: (Math.random() - 0.5) * 0.08 + 0.04,
+        vy: -(Math.random() * 0.12 + 0.04),
+        a: Math.random() * 0.32 + 0.14,
+        color: warmTone ? "255, 233, 185" : "255, 255, 255"
+      };
+    };
+
+    const ensureParticlesCount = () => {
+      const targetCount = Math.max(30, Math.min(50, Math.floor((canvasWidth * canvasHeight) / 38000)));
+      particles.length = 0;
+      for (let i = 0; i < targetCount; i += 1) {
+        particles.push(createParticle());
+      }
+    };
+
+    const resizeParticlesCanvas = () => {
+      const dpr = window.devicePixelRatio || 1;
+      canvasWidth = window.innerWidth;
+      canvasHeight = window.innerHeight;
+      particlesCanvas.width = Math.floor(canvasWidth * dpr);
+      particlesCanvas.height = Math.floor(canvasHeight * dpr);
+      particlesCanvas.style.width = `${canvasWidth}px`;
+      particlesCanvas.style.height = `${canvasHeight}px`;
+      pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ensureParticlesCount();
+    };
+
+    const updateParticles = () => {
+      pctx.clearRect(0, 0, canvasWidth, canvasHeight);
+      for (let i = 0; i < particles.length; i += 1) {
+        const p = particles[i];
+        if (pointer.active) {
+          const dx = p.x - pointer.x;
+          const dy = p.y - pointer.y;
+          const distSq = dx * dx + dy * dy;
+          const influenceRadius = 120;
+          if (distSq > 1 && distSq < influenceRadius * influenceRadius) {
+            const dist = Math.sqrt(distSq);
+            const force = (1 - dist / influenceRadius) * 0.06;
+            p.x += (dx / dist) * force;
+            p.y += (dy / dist) * force;
+          }
+        }
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.y < -12 || p.x > canvasWidth + 12 || p.x < -12) {
+          p.x = Math.random() * canvasWidth;
+          p.y = canvasHeight + Math.random() * 20;
+        }
+
+        pctx.beginPath();
+        pctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        pctx.fillStyle = `rgba(${p.color}, ${p.a})`;
+        pctx.fill();
+      }
+      rafId = window.requestAnimationFrame(updateParticles);
+    };
+
+    resizeParticlesCanvas();
+    updateParticles();
+    window.addEventListener("resize", resizeParticlesCanvas);
+    window.addEventListener("mousemove", (event) => {
+      pointer.x = event.clientX;
+      pointer.y = event.clientY;
+      pointer.active = true;
+    });
+    window.addEventListener("mouseleave", () => {
+      pointer.active = false;
+    });
+    window.addEventListener("beforeunload", () => window.cancelAnimationFrame(rafId));
+  </script>
+</body>
+</html>
