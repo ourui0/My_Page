@@ -113,7 +113,6 @@
         <li><a href="#about" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">关于我</a></li>
         <li><a href="#projects" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">项目</a></li>
         <li><a href="#notes" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">笔记</a></li>
-        <li><a href="#social" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">社交</a></li>
       </ul>
     </nav>
   </header>
@@ -220,35 +219,71 @@
     </section>
 
     <section id="notes" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p class="text-shadow-soft text-sm tracking-[0.18em] text-cyan-100/85 uppercase">Notes</p>
-          <h2 class="font-cinematic text-shadow-soft mt-3 text-2xl font-semibold sm:text-3xl">笔记展示</h2>
-        </div>
-        <a
-          id="notes-repo-link"
-          href="https://github.com/你的用户名/你的笔记仓库名"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-shadow-soft text-sm text-slate-100/80 transition-colors duration-300 hover:text-cyan-100"
-        >
-          在 GitHub 查看
-        </a>
+      <div class="flex flex-col gap-2">
+        <p class="text-shadow-soft text-sm tracking-[0.18em] text-cyan-100/85 uppercase">Observatory Log</p>
+        <h2 class="font-cinematic text-shadow-soft mt-1 text-2xl font-semibold sm:text-3xl">观测日志 / 笔记</h2>
+        <p class="text-shadow-soft mt-3 max-w-xl text-sm leading-relaxed text-slate-100/80">
+          以下信号源持续更新中。点击任意条目，跳转至对应的 GitHub 知识仓库。
+        </p>
       </div>
 
       <div id="notes-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="reveal-on-scroll rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg">
-          <p class="text-shadow-soft text-sm text-slate-100/80">正在从 GitHub 仓库读取笔记...</p>
+        <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.55)]">
+          <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">&#x1F6F0;&#xFE0F; 课堂笔记</p>
+          <h3 class="text-shadow-soft mt-4 text-lg font-medium">课堂笔记</h3>
+          <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+            基底现实的同步记录，关乎智软学院的课堂知识标本。
+          </p>
+          <a href="https://github.com/ourui0/note" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开频率 &rarr;</a>
+        </article>
+
+        <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.55)]">
+          <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">&#x1F6F0;&#xFE0F; DL 编译器</p>
+          <h3 class="text-shadow-soft mt-4 text-lg font-medium">DL 编译器相关论文阅读</h3>
+          <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+            Deep Learning 编译器的深层重构逻辑，正在解析底层计算图的折射率。
+          </p>
+          <a href="https://github.com/ourui0/DL_C_R" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开频率 &rarr;</a>
+        </article>
+
+        <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.55)]">
+          <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">&#x1F6F0;&#xFE0F; AI Agent</p>
+          <h3 class="text-shadow-soft mt-4 text-lg font-medium">AI Agent 相关学习代码和笔记</h3>
+          <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+            硅基实体的自主演试。关于 AI Agent 的构造协议与行为逻辑代码。
+          </p>
+          <a href="https://github.com/ourui0/AI_Agent_learning" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开频率 &rarr;</a>
+        </article>
+
+        <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.55)]">
+          <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">&#x1F6F0;&#xFE0F; AI 供应链</p>
+          <h3 class="text-shadow-soft mt-4 text-lg font-medium">AI 供应链相关论文阅读笔记</h3>
+          <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+            AI 软件供应链的安全拓扑图景，审视模型与数据的流动防线。
+          </p>
+          <a href="https://github.com/ourui0/AI-Software-Supply-Chain" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开频率 &rarr;</a>
+        </article>
+
+        <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.55)]">
+          <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">&#x1F6F0;&#xFE0F; C++ 学习</p>
+          <h3 class="text-shadow-soft mt-4 text-lg font-medium">C++ 学习笔记</h3>
+          <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+            指针、内存与虚函数的古老咒语。接近机器底层的实体构建指南。
+          </p>
+          <a href="https://github.com/ourui0/CPP_learning" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开频率 &rarr;</a>
         </article>
       </div>
     </section>
 
     <section id="social" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">社交链接</h2>
+      <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">信号基站</h2>
+      <p class="text-shadow-soft mt-4 max-w-xl text-sm leading-relaxed text-slate-100/80">
+        这里是唯一的对外传输接口。所有代码痕迹与思维残片均沉淀于此。
+      </p>
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="https://github.com/你的用户名/你的笔记仓库名" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">GitHub</a>
-        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">LinkedIn</a>
-        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(251,191,36,0.5)]">Email</a>
+        <a href="https://github.com/ourui0" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_24px_rgba(125,211,252,0.6)]">
+          GitHub &rarr;
+        </a>
       </div>
     </section>
   </main>
@@ -260,16 +295,8 @@
   <script>
     const nav = document.getElementById("site-nav");
     const year = document.getElementById("year");
-    const notesGrid = document.getElementById("notes-grid");
-    const notesRepoLink = document.getElementById("notes-repo-link");
     const particlesCanvas = document.getElementById("particles");
     const pctx = particlesCanvas.getContext("2d");
-    const notesConfig = {
-      owner: "你的用户名",
-      repo: "你的笔记仓库名",
-      branch: "main",
-      directory: "notes"
-    };
     year.textContent = new Date().getFullYear();
 
     const onScroll = () => {
@@ -294,73 +321,7 @@
       { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
     );
 
-    const observeRevealItems = (root = document) => {
-      root.querySelectorAll(".reveal-on-scroll").forEach((item) => observer.observe(item));
-    };
-
-    const repoUrl = `https://github.com/${notesConfig.owner}/${notesConfig.repo}`;
-    const notesDirectoryUrl = `${repoUrl}/tree/${notesConfig.branch}/${notesConfig.directory}`;
-    notesRepoLink.href = notesDirectoryUrl;
-
-    const formatNoteTitle = (fileName) => fileName
-      .replace(/\.(md|markdown|html?)$/i, "")
-      .replace(/[-_]+/g, " ")
-      .trim();
-
-    const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      "\"": "&quot;",
-      "'": "&#39;"
-    }[char]));
-
-    const createNoteCard = (note) => `
-      <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.6)]">
-        <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">GitHub Note</p>
-        <h3 class="text-shadow-soft mt-4 text-lg font-medium">${escapeHtml(formatNoteTitle(note.name))}</h3>
-        <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
-          来自 GitHub 仓库 ${escapeHtml(notesConfig.directory)}/ 目录的笔记文件。
-        </p>
-        <a href="${note.html_url}" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开笔记 →</a>
-      </article>
-    `;
-
-    const renderNotesFallback = () => {
-      notesGrid.innerHTML = `
-        <article class="reveal-on-scroll rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg sm:col-span-2 lg:col-span-3">
-          <p class="text-shadow-soft text-sm leading-relaxed text-slate-100/90">
-            暂未在 GitHub 仓库中发现 ${escapeHtml(notesConfig.directory)}/ 目录下的笔记文件。将 Markdown 或 HTML 笔记放入该目录后，这里会自动展示。
-          </p>
-          <a href="${repoUrl}" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-5 inline-block text-sm text-cyan-100 transition-colors duration-300 hover:text-white">前往 GitHub 仓库 →</a>
-        </article>
-      `;
-      observeRevealItems(notesGrid);
-    };
-
-    const loadNotes = async () => {
-      try {
-        const response = await fetch(`https://api.github.com/repos/${notesConfig.owner}/${notesConfig.repo}/contents/${notesConfig.directory}?ref=${notesConfig.branch}`);
-        if (!response.ok) {
-          throw new Error("Unable to load notes");
-        }
-
-        const files = await response.json();
-        const notes = files.filter((file) => file.type === "file" && /\.(md|markdown|html?)$/i.test(file.name));
-        if (notes.length === 0) {
-          renderNotesFallback();
-          return;
-        }
-
-        notesGrid.innerHTML = notes.map(createNoteCard).join("");
-        observeRevealItems(notesGrid);
-      } catch (error) {
-        renderNotesFallback();
-      }
-    };
-
-    observeRevealItems();
-    loadNotes();
+    document.querySelectorAll(".reveal-on-scroll").forEach((item) => observer.observe(item));
 
     const particles = [];
     let canvasWidth = 0;
