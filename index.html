@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="个人主页 - 现代极简风格" />
-  <title>个人主页 | Your Name</title>
+  <meta name="description" content="or 的个人主页 - 现代极简风格" />
+  <title>个人主页 | or</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -107,11 +107,12 @@
   >
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
       <a href="#hero" class="font-cinematic text-shadow-soft text-sm font-semibold tracking-wide transition-opacity duration-300 hover:opacity-80">
-        YourName
+        欧睿
       </a>
       <ul class="flex items-center gap-4 text-sm sm:gap-6">
         <li><a href="#about" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">关于我</a></li>
         <li><a href="#projects" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">项目</a></li>
+        <li><a href="#notes" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">笔记</a></li>
         <li><a href="#social" class="text-shadow-soft transition-all duration-300 hover:text-cyan-100">社交</a></li>
       </ul>
     </nav>
@@ -122,10 +123,10 @@
       <div class="reveal-on-scroll max-w-3xl rounded-3xl border border-white/20 bg-black/20 p-8 backdrop-blur-lg sm:p-10">
         <p class="hero-reveal hero-reveal-delay-1 text-shadow-soft mb-4 text-sm tracking-[0.2em] text-cyan-100/90 uppercase">Personal Website</p>
         <h1 class="font-cinematic hero-reveal hero-reveal-delay-2 text-shadow-soft text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
-          你好，我是 <span class="text-cyan-100">Your Name</span>。
+          你好，我是 <span class="text-cyan-100">or</span>。
         </h1>
         <p class="hero-reveal hero-reveal-delay-3 text-shadow-soft mt-6 max-w-2xl text-base leading-relaxed text-slate-100/90 sm:text-lg">
-          我专注于打造现代、简洁且注重体验的数字产品。欢迎浏览我的项目、经历与联系方式。
+          这里是 NJU-ISE（南京大学智能软件与工程学院）。<br>观测数据加载中……主要同步一些思维碎片、二进制笔记与尚未完工的个人项目。<br>欢迎接入我的信号频率。
         </p>
         <div class="hero-reveal hero-reveal-delay-3 mt-10 flex flex-wrap gap-4">
           <a
@@ -135,10 +136,10 @@
             查看项目
           </a>
           <a
-            href="#about"
+            href="#notes"
             class="rounded-full border border-white/30 bg-black/20 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-black/30 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)]"
           >
-            了解更多
+            阅读笔记
           </a>
         </div>
       </div>
@@ -218,10 +219,34 @@
       </div>
     </section>
 
+    <section id="notes" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-shadow-soft text-sm tracking-[0.18em] text-cyan-100/85 uppercase">Notes</p>
+          <h2 class="font-cinematic text-shadow-soft mt-3 text-2xl font-semibold sm:text-3xl">笔记展示</h2>
+        </div>
+        <a
+          id="notes-repo-link"
+          href="https://github.com/你的用户名/你的笔记仓库名"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-shadow-soft text-sm text-slate-100/80 transition-colors duration-300 hover:text-cyan-100"
+        >
+          在 GitHub 查看
+        </a>
+      </div>
+
+      <div id="notes-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal-on-scroll rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg">
+          <p class="text-shadow-soft text-sm text-slate-100/80">正在从 GitHub 仓库读取笔记...</p>
+        </article>
+      </div>
+    </section>
+
     <section id="social" class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
       <h2 class="font-cinematic text-shadow-soft text-2xl font-semibold sm:text-3xl">社交链接</h2>
       <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">GitHub</a>
+        <a href="https://github.com/你的用户名/你的笔记仓库名" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">GitHub</a>
         <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(125,211,252,0.55)]">LinkedIn</a>
         <a href="#" class="rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm text-slate-100 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:bg-white/20 hover:shadow-[0_0_22px_rgba(251,191,36,0.5)]">Email</a>
       </div>
@@ -229,15 +254,22 @@
   </main>
 
   <footer class="relative z-10 mx-auto mb-8 max-w-6xl rounded-2xl border border-white/20 bg-black/20 px-4 py-6 text-center text-sm text-slate-100/85 backdrop-blur-lg">
-    <p class="text-shadow-soft">&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    <p class="text-shadow-soft">&copy; <span id="year"></span> 欧睿. All rights reserved.</p>
   </footer>
 
   <script>
     const nav = document.getElementById("site-nav");
     const year = document.getElementById("year");
-    const revealItems = document.querySelectorAll(".reveal-on-scroll");
+    const notesGrid = document.getElementById("notes-grid");
+    const notesRepoLink = document.getElementById("notes-repo-link");
     const particlesCanvas = document.getElementById("particles");
     const pctx = particlesCanvas.getContext("2d");
+    const notesConfig = {
+      owner: "你的用户名",
+      repo: "你的笔记仓库名",
+      branch: "main",
+      directory: "notes"
+    };
     year.textContent = new Date().getFullYear();
 
     const onScroll = () => {
@@ -262,7 +294,73 @@
       { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
     );
 
-    revealItems.forEach((item) => observer.observe(item));
+    const observeRevealItems = (root = document) => {
+      root.querySelectorAll(".reveal-on-scroll").forEach((item) => observer.observe(item));
+    };
+
+    const repoUrl = `https://github.com/${notesConfig.owner}/${notesConfig.repo}`;
+    const notesDirectoryUrl = `${repoUrl}/tree/${notesConfig.branch}/${notesConfig.directory}`;
+    notesRepoLink.href = notesDirectoryUrl;
+
+    const formatNoteTitle = (fileName) => fileName
+      .replace(/\.(md|markdown|html?)$/i, "")
+      .replace(/[-_]+/g, " ")
+      .trim();
+
+    const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    }[char]));
+
+    const createNoteCard = (note) => `
+      <article class="reveal-on-scroll group rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_0_28px_rgba(125,211,252,0.6)]">
+        <p class="text-shadow-soft text-xs tracking-[0.16em] text-cyan-100/80 uppercase">GitHub Note</p>
+        <h3 class="text-shadow-soft mt-4 text-lg font-medium">${escapeHtml(formatNoteTitle(note.name))}</h3>
+        <p class="text-shadow-soft mt-3 text-sm leading-relaxed text-slate-100/85">
+          来自 GitHub 仓库 ${escapeHtml(notesConfig.directory)}/ 目录的笔记文件。
+        </p>
+        <a href="${note.html_url}" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-6 inline-block text-sm text-slate-100/85 transition-colors duration-300 group-hover:text-cyan-100">打开笔记 →</a>
+      </article>
+    `;
+
+    const renderNotesFallback = () => {
+      notesGrid.innerHTML = `
+        <article class="reveal-on-scroll rounded-2xl border border-white/20 bg-white/10 p-6 shadow-soft backdrop-blur-lg sm:col-span-2 lg:col-span-3">
+          <p class="text-shadow-soft text-sm leading-relaxed text-slate-100/90">
+            暂未在 GitHub 仓库中发现 ${escapeHtml(notesConfig.directory)}/ 目录下的笔记文件。将 Markdown 或 HTML 笔记放入该目录后，这里会自动展示。
+          </p>
+          <a href="${repoUrl}" target="_blank" rel="noopener noreferrer" class="text-shadow-soft mt-5 inline-block text-sm text-cyan-100 transition-colors duration-300 hover:text-white">前往 GitHub 仓库 →</a>
+        </article>
+      `;
+      observeRevealItems(notesGrid);
+    };
+
+    const loadNotes = async () => {
+      try {
+        const response = await fetch(`https://api.github.com/repos/${notesConfig.owner}/${notesConfig.repo}/contents/${notesConfig.directory}?ref=${notesConfig.branch}`);
+        if (!response.ok) {
+          throw new Error("Unable to load notes");
+        }
+
+        const files = await response.json();
+        const notes = files.filter((file) => file.type === "file" && /\.(md|markdown|html?)$/i.test(file.name));
+        if (notes.length === 0) {
+          renderNotesFallback();
+          return;
+        }
+
+        notesGrid.innerHTML = notes.map(createNoteCard).join("");
+        observeRevealItems(notesGrid);
+      } catch (error) {
+        renderNotesFallback();
+      }
+    };
+
+    observeRevealItems();
+    loadNotes();
 
     const particles = [];
     let canvasWidth = 0;
